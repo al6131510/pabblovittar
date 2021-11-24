@@ -72,7 +72,7 @@ nav ul li.selected {
 
 aside{
     background-color: #f193bf;
-    margin: 10px 10px 0px 10px;
+    margin: 10px 10px 0 0;
     width: 30%;
 }
 
@@ -178,12 +178,6 @@ caption {
     flex-wrap: wrap;
 }
 
-@media (max-width:1025px){
-    header img{
-        display: none;
-    }
-}
-
 @media (max-width:800px){
 
   
@@ -212,5 +206,34 @@ caption {
 
     .photos img{
         margin: 15px;
+    }
+}
+
+@media (max-width:650px){
+    header{
+        background-image: none;
+    }
+
+    #commentaires{
+        width: 200px
+    }
+
+    aside img{
+        width: 75px;
+    }
+}
+
+@media (max-width:400px){
+    header img{
+        width: 200px;
+        text-align: center;
+    }
+
+    aside{
+        display: none;
+    }
+
+    main{
+        width: auto;
     }
 }
