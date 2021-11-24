@@ -223,6 +223,12 @@ caption {
     }
 }
 
+@media (max-width:550px){
+    .biographie p img{
+        width:275px
+    }
+}
+
 @media (max-width:400px){
     header img{
         width: 200px;
