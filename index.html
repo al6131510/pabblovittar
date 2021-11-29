@@ -7,7 +7,25 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Accueil - Pabllo Vittar</title>
     <link rel="stylesheet" href="style.css">
-
+    <script>
+        function verifierAge(dateString) {
+            var dateDuJour = new Date();
+            var dateNaissance = new Date(dateString);
+            var age = dateDuJour.getFullYear() - dateNaissance.getFullYear();
+            var m = dateDuJour.getMonth() - dateNaissance.getMonth();
+            if (m < 0 || (m === 0 && dateDuJour.getDate() < dateNaissance.getDate())) {
+                age--;
+            }
+            return age;
+        }
+        var dob = prompt("Entrez votre date de naissance (AAAA-MM-JJ)", "Tapez ici");
+        if (verifierAge(dob) <= 13) {
+            alert("Ce site est déconseillé pour les personnes âgées de 13 ans et moins. Pour un public averti.")
+        }
+        else {
+            alert("Bienvenue sur mon site de Pabllo Vittar.")
+        }
+    </script>
 </head>
 
 <body>
